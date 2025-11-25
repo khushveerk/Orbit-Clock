@@ -21,25 +21,20 @@ It's more like a Modern Calendar Clock.
 # 📁 Project Structure
 
 ## orbit-clock/
+
 │
+
 ├── index.html        # Main entry file combining UI + 3D background
+
 ├── style.css         # Clock layout, rings, and general styling
+
 ├── clock.js          # Ring generation + clock logic (createRingItems, updateClock)
+
 ├── background.js     # Three.js planets, starfield, animation loop
+
 ├── screenshots/      
-└── README.md
 
-orbit-clock/
-│
-├── index.html        # Main entry file combining UI + 3D background
-├── style.css         # Clock layout, rings, and general styling
-├── clock.js          # Ring generation + clock logic (createRingItems, updateClock)
-├── background.js     # Three.js planets, starfield, animation loop
-├── screenshots/      # Folder to store preview images (you add this)
-│   ├── clock.png
-│   └── background.png
 └── README.md
-
 
 # 🧠 How It Works
 

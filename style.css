@@ -1,0 +1,145 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #555;
+    overflow: hidden;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.clock-container {
+    position: relative;
+    width: 0;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ring-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+    width: 0;
+    height: 0;
+}
+
+/* Ring Sizes - controlled by JS translation, but we need z-index */
+#month-ring {
+    z-index: 1;
+}
+
+#day-ring {
+    z-index: 2;
+}
+
+#date-ring {
+    z-index: 3;
+}
+
+.ring-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    /* Ensure text doesn't block clicks */
+}
+
+.ring-item.active {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Specific highlight colors for rings */
+#month-ring .active {
+    color: #3498db;
+}
+
+#day-ring .active {
+    color: #2ecc71;
+}
+
+#date-ring .active {
+    color: #e74c3c;
+}
+
+.clock-face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: rgba(34, 34, 34, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    /* Ensure clock face doesn't block clicks */
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(0deg);
+    border-radius: 5px 5px 0 0;
+    z-index: 11;
+}
+
+.hour {
+    width: 6px;
+    height: 50px;
+    background-color: #fff;
+}
+
+.minute {
+    width: 4px;
+    height: 70px;
+    background-color: #ccc;
+}
+
+.second {
+    width: 2px;
+    height: 80px;
+    background-color: #e74c3c;
+}
+
+.center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}

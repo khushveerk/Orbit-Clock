@@ -3,7 +3,7 @@
 A minimal live clock with a 3D procedural solar-system background. 
 It's more like a Modern Calendar Clock.
 
-# Features
+## Features
 🕒 Clock UI
 
 -Circular rings showing month, day, and date, with live highlighting.
@@ -18,9 +18,9 @@ It's more like a Modern Calendar Clock.
 
 -Resize handling ensures proper scaling on all screen sizes.
 
-# 📁 Project Structure
+## 📁 Project Structure
 
-## orbit-clock/
+### orbit-clock/
 
 │
 
@@ -36,14 +36,14 @@ It's more like a Modern Calendar Clock.
 
 └── README.md
 
-# 🧠 How It Works
+## 🧠 How It Works
 
-## Ring Logic
+#### Ring Logic
 
 - createRingItems() generates .ring-item elements for months, days, dates.
 - CSS transforms position these items in circular rings.
 
-## Clock Updates
+#### Clock Updates
 
 - updateClock() reads real-time values and:
 
@@ -51,7 +51,7 @@ It's more like a Modern Calendar Clock.
 
 - Updates analog clock hands.
 
-## 3D Scene (Three.js)
+#### 3D Scene (Three.js)
 
 - background.js creates:
 - A responsive starfield
